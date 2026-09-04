@@ -1,0 +1,21 @@
+[
+  {
+    "id": "lead_1788563354339",
+    "submittedAt": "2026-09-04T23:09:14.339Z",
+    "companyName": "Global Agro Exports Ltd",
+    "country": "India",
+    "contactPerson": "Rajesh Kumar",
+    "email": "rajesh@globalagro.in",
+    "whatsapp": "+91 98765 43210",
+    "industry": "Rice & Spices",
+    "isExhibiting": "YES",
+    "hasDistributor": "NO",
+    "supportNeeds": [
+      "Interpreter",
+      "Buyer Meetings"
+    ],
+    "timeline": [
+      "During the exhibition"
+    ]
+  }
+]

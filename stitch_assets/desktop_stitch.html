@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'page-bg': '#F8FAEC',
+        'navy-deep': '#092B72',
+        'blue-primary': '#0838A1',
+        'blue-soft': '#EEF3FF',
+        'yellow-brand': '#FFC120',
+        'border-subtle': '#E2E8F0',
+        'text-primary': '#092B72',
+        'text-secondary': '#475569',
+        'text-muted': '#64748B',
+      },
+      borderRadius: {
+        'DEFAULT': '0.375rem',
+        'lg': '0.5rem',
+        'xl': '0.75rem',
+        'full': '9999px'
+      },
+      spacing: {
+        'margin-desktop': '4rem',
+        'space-5xl': '8rem',
+        'space-xs': '0.5rem',
+        'space-2xl': '3rem',
+        'space-lg': '1.5rem',
+        'max-container': '84rem',
+        'gutter-desktop': '2rem',
+        'space-4xl': '6rem',
+        'space-xl': '2rem',
+        'space-sm': '0.75rem',
+        'margin-mobile': '1.25rem',
+        'space-2xs': '0.25rem',
+        'space-md': '1rem',
+        'space-3xl': '4rem',
+        'gutter-mobile': '1rem'
+      },
+      fontFamily: {
+        'headline-sm': ['Epilogue', 'sans-serif'],
+        'body-lg': ['Manrope', 'sans-serif'],
+        'label-caps': ['Manrope', 'sans-serif'],
+        'headline-xl': ['Epilogue', 'sans-serif'],
+        'display-hero': ['Epilogue', 'sans-serif'],
+        'headline-md': ['Epilogue', 'sans-serif'],
+        'data-mono': ['Manrope', 'sans-serif'],
+        'headline-xl-mobile': ['Epilogue', 'sans-serif'],
+        'headline-lg': ['Epilogue', 'sans-serif'],
+        'body-xl': ['Manrope', 'sans-serif'],
+        'body-md': ['Manrope', 'sans-serif'],
+        'body-sm': ['Manrope', 'sans-serif'],
+        'display-hero-mobile': ['Epilogue', 'sans-serif'],
+        'label-md': ['Manrope', 'sans-serif']
+      },
+      fontSize: {
+        'headline-sm': ['1.25rem', { 'lineHeight': '1.35', 'letterSpacing': '0em', 'fontWeight': '600' }],
+        'body-lg': ['1.125rem', { 'lineHeight': '1.6', 'letterSpacing': '0em', 'fontWeight': '400' }],
+        'label-caps': ['0.75rem', { 'lineHeight': '1.2', 'letterSpacing': '0.12em', 'fontWeight': '700' }],
+        'headline-xl': ['3rem', { 'lineHeight': '1.15', 'letterSpacing': '-0.02em', 'fontWeight': '700' }],
+        'display-hero': ['4.25rem', { 'lineHeight': '1.08', 'letterSpacing': '-0.03em', 'fontWeight': '800' }],
+        'headline-md': ['1.75rem', { 'lineHeight': '1.3', 'letterSpacing': '-0.01em', 'fontWeight': '600' }],
+        'data-mono': ['0.875rem', { 'lineHeight': '1.4', 'letterSpacing': '0.04em', 'fontWeight': '500' }],
+        'headline-xl-mobile': ['2rem', { 'lineHeight': '1.2', 'letterSpacing': '-0.01em', 'fontWeight': '700' }],
+        'headline-lg': ['2.25rem', { 'lineHeight': '1.25', 'letterSpacing': '-0.015em', 'fontWeight': '700' }],
+        'body-xl': ['1.25rem', { 'lineHeight': '1.6', 'letterSpacing': '-0.005em', 'fontWeight': '400' }],
+        'body-md': ['1rem', { 'lineHeight': '1.55', 'letterSpacing': '0em', 'fontWeight': '400' }],
+        'body-sm': ['0.875rem', { 'lineHeight': '1.5', 'letterSpacing': '0.01em', 'fontWeight': '400' }],
+        'display-hero-mobile': ['2.5rem', { 'lineHeight': '1.1', 'letterSpacing': '-0.02em', 'fontWeight': '800' }],
+        'label-md': ['0.875rem', { 'lineHeight': '1.2', 'letterSpacing': '0.02em', 'fontWeight': '600' }]
+      }
+    }
+  }
+};</script></head><body class="bg-page-bg font-body-md text-text-secondary antialiased selection:bg-yellow-brand selection:text-navy-deep"><header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-sm"><div class="h-20 max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group focus:outline-none" data-path="home" href="#"><img alt="Globalize Group Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACT1Ar22ForZFNHuAq-aorpC5iu00c0RKURKpLiNxmdgcOGhOR3XDFyyjYpZA0G8dmKYRNjL20Ai9m6ZF1UvtBt_vX4mQMCNwSZcr8oMA4vPfQoIx-JDC0MODwIkwZht79uAbJAu2oNwYvaffgjjGW3zXd7vDygvv0uiAJU_5lSwes1Hk91jlXS2WmkUG8tuHxzKNgWwoULvqLp50M_O4QWK_vIZBgR4SAMHjqON_le8Z19eiB4SLsSQO27SjExcS5og"/><span class="hidden sm:inline-block font-headline-sm text-headline-sm text-navy-deep uppercase tracking-wider font-bold">Globalize</span></a><div class="hidden xl:flex items-center border border-border-subtle bg-blue-soft px-space-sm py-space-2xs rounded"><span class="w-2 h-2 rounded-full bg-yellow-brand mr-2 shrink-0"></span><span class="font-label-caps text-label-caps uppercase text-navy-deep font-bold whitespace-nowrap">FOOD AFRICA 2026 | 7–10 DEC · CAIRO</span></div></div><nav class="hidden lg:flex items-center gap-space-lg h-full" data-active-classes="text-blue-primary border-b-2 border-blue-primary"><a aria-current="page" class="font-label-md uppercase tracking-wider transition-colors py-space-sm text-blue-primary border-b-2 border-blue-primary font-bold" data-path="home" href="#">Home</a><a class="font-label-md text-label-md uppercase tracking-wider text-text-secondary hover:text-blue-primary transition-colors py-space-sm font-semibold" data-path="food-africa-2026" href="#">Food Africa 2026</a><a class="font-label-md text-label-md uppercase tracking-wider text-text-secondary hover:text-blue-primary transition-colors py-space-sm font-semibold" data-path="services" href="#">Services</a><a class="font-label-md text-label-md uppercase tracking-wider text-text-secondary hover:text-blue-primary transition-colors py-space-sm font-semibold" data-path="how-it-works" href="#">How It Works</a><a class="font-label-md text-label-md uppercase tracking-wider text-text-secondary hover:text-blue-primary transition-colors py-space-sm font-semibold" data-path="why-globalize" href="#">Why Globalize</a><a class="font-label-md text-label-md uppercase tracking-wider text-text-secondary hover:text-blue-primary transition-colors py-space-sm font-semibold" data-path="case-study" href="#">Case Study</a><a class="font-label-md text-label-md uppercase tracking-wider text-text-secondary hover:text-blue-primary transition-colors py-space-sm font-semibold" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><a class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs border border-border-subtle bg-white hover:border-blue-primary hover:bg-blue-soft transition-colors rounded group" href="https://wa.me/201062990808" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-blue-primary text-base group-hover:scale-110 transition-transform">chat</span><span class="font-data-mono text-data-mono text-navy-deep font-semibold">+20 106 299 0808</span></a><a class="inline-flex items-center justify-center bg-blue-primary hover:bg-navy-deep text-white font-label-md text-label-md uppercase font-bold px-space-md py-space-xs rounded shadow-sm hover:shadow transition-all shrink-0" data-path="consultation" href="#support-plan-form">Get Your Support Plan</a><div class="flex items-center gap-space-xs pl-space-xs border-l border-border-subtle"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-subtle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNehHBSICbdBuUUhcAanb5eZtOw0i2pxwyUyAZrKT4XyJEMY87d67MnQXrFldeEk8-g02APPJx_HnQDfDoMBjNKGLvsLsYF2x-I6OIhLHr7c2HG90fIN2_Q7bN2y4zXAiOXfoSZKPbLWuEyh0JiMelvtn4bB3g9OFJ6_RE2Xh0go8Mu4Vbx2kJxqmNNZWmb_TJph_jL2Qpz_lUGT4uPwbX1EgmjcXZALlrX4-l6F5STA2C3WSF8KdL"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-yellow-brand border-2 border-white rounded-full" title="Cairo On-Ground Team Active"></span></div><div class="hidden 2xl:flex flex-col"><span class="font-label-caps text-label-caps text-text-muted">ON-GROUND</span><span class="font-label-caps text-label-caps text-navy-deep font-bold">CAIRO TEAM</span></div></div></div></div></header><main class="w-full pt-20 bg-page-bg min-h-screen"><div class="flex flex-col w-full">
+<!-- TOP EVENT NOTIFICATION & PROTOCOL STATUS BAR -->
+<section class="w-full bg-navy-deep py-space-xs px-margin-mobile lg:px-margin-desktop border-b border-navy-deep/20 text-white">
+<div class="max-w-max-container mx-auto flex flex-col md:flex-row items-center justify-between gap-space-xs text-center md:text-left">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex h-2.5 w-2.5 rounded-full bg-yellow-brand animate-pulse"></span>
+<span class="font-label-caps text-label-caps uppercase text-yellow-brand font-bold tracking-widest">FOOD AFRICA 2026 COMMERCIAL CAMPAIGN</span>
+<span class="text-white/40 hidden sm:inline">•</span>
+<span class="font-data-mono text-data-mono text-blue-soft hidden sm:inline">7–10 DECEMBER 2026 | EIEC CAIRO, EGYPT</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-2xs text-yellow-brand font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-bold">PRE-SHOW BUYER OUTREACH WINDOW: ACTIVE (6–8 WEEKS LEAD TIME)</span>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs text-blue-soft font-data-mono text-data-mono">
+<span class="text-yellow-brand font-bold">CAIRO DESK</span>: ONLINE
+        </div>
+</div>
+</div>
+</section>
+<!-- HERO SECTION WITH INTEGRATED FAST QUALIFICATION -->
+<section class="w-full bg-page-bg relative overflow-hidden py-space-3xl lg:py-space-4xl">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left 7 Cols: Headline & Campaign Value Prop -->
+<div class="lg:col-span-7 space-y-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs bg-blue-soft border border-blue-primary/20 rounded">
+<span class="material-symbols-outlined text-blue-primary text-base">verified</span>
+<span class="font-label-caps text-label-caps uppercase text-blue-primary font-bold tracking-wider">OFFICIAL ON-GROUND EXHIBITION ALLY</span>
+</div>
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-navy-deep leading-none tracking-tight">
+            Turn Your <span class="text-blue-primary">Food Africa</span> Booth Into Guaranteed Cairo Business.
+          </h1>
+<p class="font-body-xl text-body-xl text-text-secondary max-w-2xl">
+            Professional on-the-ground support at EIEC Cairo: commercial interpreters fluent in Arabic trade terms, pre-scheduled Egyptian importer meetings, elite booth hosts, and decisive post-show in-person closing. Your team in Egypt, even when you're not.
+          </p>
+<!-- Fast Trust Badges Mosaic -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm bg-white border border-border-subtle rounded shadow-sm hover:border-blue-primary/40 transition-colors">
+<div class="font-headline-sm text-headline-sm text-blue-primary font-bold">100%</div>
+<div class="font-label-caps text-label-caps uppercase text-text-muted mt-space-2xs font-semibold">Multilingual Trade English, Arabic, French, Russian</div>
+</div>
+<div class="p-space-sm bg-white border border-border-subtle rounded shadow-sm hover:border-blue-primary/40 transition-colors">
+<div class="font-headline-sm text-headline-sm text-navy-deep font-bold">420+</div>
+<div class="font-label-caps text-label-caps uppercase text-text-muted mt-space-2xs font-semibold">Vetted Egyptian Importers &amp; FMCG Wholesalers</div>
+</div>
+<div class="p-space-sm bg-white border border-border-subtle rounded shadow-sm hover:border-blue-primary/40 transition-colors">
+<div class="font-headline-sm text-headline-sm text-blue-primary font-bold">24h</div>
+<div class="font-label-caps text-label-caps uppercase text-text-muted mt-space-2xs font-semibold">Cairo Field Office Rapid Lead Follow-up</div>
+</div>
+</div>
+<!-- Dual Conversion Action Cluster -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-sm">
+<a class="h-14 px-space-xl bg-yellow-brand hover:bg-[#fab40a] text-navy-deep font-label-md text-label-md uppercase tracking-wider font-extrabold inline-flex items-center justify-center gap-space-xs rounded shadow-md transition-all hover:scale-[1.01]" href="#support-plan-form">
+<span>Claim Your Free Support Plan</span>
+<span class="material-symbols-outlined text-lg font-bold">arrow_forward</span>
+</a>
+<a class="h-14 px-space-lg bg-white hover:bg-blue-soft border border-border-subtle text-navy-deep font-label-md text-label-md uppercase tracking-wider font-bold inline-flex items-center justify-center gap-space-xs rounded shadow-sm transition-colors" href="https://wa.me/201062990808" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-blue-primary text-lg">chat</span>
+<span>WhatsApp Desk: +20 106 299 0808</span>
+</a>
+</div>
+<div class="flex items-center gap-space-xs text-text-muted font-body-sm text-body-sm pt-space-2xs">
+<span class="material-symbols-outlined text-blue-primary text-base">info</span>
+<span>Pre-show matchmaking requires early allocation. Dedicated interpreters fill 4 weeks prior to show opening.</span>
+</div>
+</div>
+<!-- Right 5 Cols: Visual Dossier / Operational Snapshot -->
+<div class="lg:col-span-5 bg-white border border-border-subtle rounded-lg p-space-xl relative shadow-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-border-subtle">
+<div class="flex items-center gap-space-xs">
+<span class="h-2.5 w-2.5 rounded-full bg-blue-primary"></span>
+<span class="font-label-caps text-label-caps text-navy-deep font-bold uppercase tracking-widest">CAIRO TRADE COMMAND</span>
+</div>
+<span class="font-data-mono text-data-mono text-blue-primary font-bold px-space-xs py-0.5 bg-blue-soft rounded">DELEGATION DESK</span>
+</div>
+<!-- Image Asset -->
+<div class="relative w-full h-56 mb-space-md overflow-hidden bg-blue-soft rounded border border-border-subtle">
+<img class="w-full h-full object-cover" data-alt="Professional commercial interpreters and agribusiness executives conducting high-stakes container purchase negotiations at Food Africa Cairo trade pavilion, sharp cinematic studio lighting, sleek corporate aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2dxKG2NebGoNtCLKHYNyq3-AD_G-Hx2eZtwwXpY0uvZ-BX6oaB5wUEUC2mDYLXgR0ooo2tw_vZBkFtHV2rATtbjANZ1IIum7i-O2Oh3jgW5v3m2gii1laOjWt9t1YOI_X0o9xcp-Y4EaD9r7F8KQ_4iwccJpGfL9nPiCzhTUT2erW22X_xnsPkt5kt1FjwWPa1-XgG5WGdol_E7qGzUeNqxKU8wVurK2FTroWS8S396EbHR3D1tdS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex justify-between items-end">
+<span class="font-label-caps text-label-caps text-white bg-navy-deep/80 backdrop-blur-sm px-space-xs py-space-2xs rounded">EIEC HALL 2 &amp; 3 SECTORS</span>
+<span class="font-data-mono text-data-mono text-yellow-brand font-bold bg-navy-deep/80 backdrop-blur-sm px-space-xs py-space-2xs rounded">CONFIRMED 2026 DEPLOYMENT</span>
+</div>
+</div>
+<!-- Fast Interactive Selector Preview -->
+<div class="space-y-space-xs font-body-sm text-body-sm">
+<div class="flex justify-between items-center p-space-sm bg-blue-soft/50 border border-border-subtle/70 rounded">
+<span class="text-text-secondary font-medium">Exhibition Dates</span>
+<span class="text-navy-deep font-bold">7–10 December 2026</span>
+</div>
+<div class="flex justify-between items-center p-space-sm bg-blue-soft/50 border border-border-subtle/70 rounded">
+<span class="text-text-secondary font-medium">Location</span>
+<span class="text-navy-deep font-bold">Egypt Int'l Exhibition Center (EIEC)</span>
+</div>
+<div class="flex justify-between items-center p-space-sm bg-blue-soft/50 border border-border-subtle/70 rounded">
+<span class="text-text-secondary font-medium">Language Coverage</span>
+<span class="text-blue-primary font-bold">Arabic, English, French, Russian</span>
+</div>
+<div class="flex justify-between items-center p-space-sm bg-blue-soft/50 border border-border-subtle/70 rounded">
+<span class="text-text-secondary font-medium">Average B2B Match Success</span>
+<span class="text-navy-deep font-bold">14–22 Meetings / Booth</span>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-blue-soft border border-blue-primary/20 rounded">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-blue-primary text-base mt-0.5">lock_clock</span>
+<div class="font-body-sm text-body-sm text-text-secondary">
+<strong class="text-navy-deep">Strict Delegation Limits:</strong> To protect buyer match exclusivity, Globalize accepts max 12 international clients per food category.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CRITICAL RISKS SECTION: WHY INTERNATIONAL EXHIBITORS FAIL IN CAIRO -->
+<section class="w-full bg-white border-y border-border-subtle py-space-4xl">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="max-w-3xl space-y-space-xs mb-space-2xl">
+<span class="font-label-caps text-label-caps uppercase text-blue-primary font-bold tracking-widest">EXHIBITION REALITY CHECK</span>
+<h2 class="font-headline-lg text-headline-lg text-navy-deep">Why 68% of Overseas Exhibitors Leave Cairo With Empty Calendars.</h2>
+<p class="font-body-lg text-body-lg text-text-secondary">International flights, booth space, custom stand construction, and hotel stays cost upwards of $15,000–$40,000. Don't sabotage your investment through these three critical commercial oversights.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Risk 01 -->
+<div class="p-space-xl bg-page-bg border border-border-subtle rounded-lg relative hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div class="text-blue-primary font-data-mono text-data-mono font-bold mb-space-sm">RISK 01 // CRITICAL BARRIER</div>
+<div class="h-10 w-10 bg-blue-soft rounded flex items-center justify-center mb-space-md border border-blue-primary/20">
+<span class="material-symbols-outlined text-blue-primary">translate</span>
+</div>
+<h3 class="font-headline-md text-headline-sm text-navy-deep mb-space-xs">The Arabic Negotiation Trap</h3>
+<p class="font-body-md text-body-md text-text-secondary">
+            Major Egyptian supermarket conglomerates, national distribution brokers, and Delta-region wholesalers negotiate container pricing, payment terms, and delivery schedules in Arabic. English works for greetings; Arabic is strictly required for deep commercial trust and binding commitments.
+          </p>
+<div class="mt-space-md pt-space-sm border-t border-border-subtle">
+<div class="font-label-caps text-label-caps text-blue-primary font-bold uppercase">Globalize Solution</div>
+<div class="font-body-sm text-body-sm text-navy-deep mt-space-2xs font-medium">Bilingual commercial negotiators trained in international shipping, letters of credit, and local trade customs.</div>
+</div>
+</div>
+<!-- Risk 02 -->
+<div class="p-space-xl bg-page-bg border border-border-subtle rounded-lg relative hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div class="text-blue-primary font-data-mono text-data-mono font-bold mb-space-sm">RISK 02 // TRAFFIC DILUTION</div>
+<div class="h-10 w-10 bg-blue-soft rounded flex items-center justify-center mb-space-md border border-blue-primary/20">
+<span class="material-symbols-outlined text-blue-primary">groups_3</span>
+</div>
+<h3 class="font-headline-md text-headline-sm text-navy-deep mb-space-xs">The Booth Crowding Fallacy</h3>
+<p class="font-body-md text-body-md text-text-secondary">
+            Food Africa welcomes over 28,000 visitors. However, over 80% are general consumers, student groups, and non-commercial browser traffic seeking free samples. Foreign sales reps waste critical hours entertaining tire-kickers while Tier-1 importers walk by unnoticed.
+          </p>
+<div class="mt-space-md pt-space-sm border-t border-border-subtle">
+<div class="font-label-caps text-label-caps text-blue-primary font-bold uppercase">Globalize Solution</div>
+<div class="font-body-sm text-body-sm text-navy-deep mt-space-2xs font-medium">Gatekeeper lead screening protocols filtering visitor badges immediately by buying volume and license status.</div>
+</div>
+</div>
+<!-- Risk 03 -->
+<div class="p-space-xl bg-page-bg border border-border-subtle rounded-lg relative hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div class="text-blue-primary font-data-mono text-data-mono font-bold mb-space-sm">RISK 03 // MOMENTUM LOSS</div>
+<div class="h-10 w-10 bg-blue-soft rounded flex items-center justify-center mb-space-md border border-blue-primary/20">
+<span class="material-symbols-outlined text-blue-primary">hourglass_disabled</span>
+</div>
+<h3 class="font-headline-md text-headline-sm text-navy-deep mb-space-xs">The 14-Day Post-Show Freeze</h3>
+<p class="font-body-md text-body-md text-text-secondary">
+            The moment foreign delegations fly out of Cairo International Airport, Egyptian buyers become unresponsive to cold follow-up emails and generic WhatsApp pings. In Egypt, deals solidify through face-to-face follow-up at the buyer's regional headquarters.
+          </p>
+<div class="mt-space-md pt-space-sm border-t border-border-subtle">
+<div class="font-label-caps text-label-caps text-blue-primary font-bold uppercase">Globalize Solution</div>
+<div class="font-body-sm text-body-sm text-navy-deep mt-space-2xs font-medium">Our permanent Cairo business reps execute in-person headquarters visits within 72 hours of show closing.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6-PILLAR EXHIBITOR SUPPORT SUITE -->
+<section class="w-full bg-page-bg py-space-4xl">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-3xl gap-space-md">
+<div class="max-w-2xl space-y-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-blue-primary font-bold tracking-widest">TACTICAL FIELD CAPABILITIES</span>
+<h2 class="font-headline-lg text-headline-lg text-navy-deep">The Complete Food Africa 2026 Operational Matrix.</h2>
+<p class="font-body-md text-body-md text-text-secondary">A modular deployment suite designed to eliminate operational friction and maximize your B2B contract conversion inside the halls of EIEC.</p>
+</div>
+<a class="inline-flex items-center gap-space-xs font-label-md text-label-md uppercase text-blue-primary hover:text-navy-deep font-bold transition-colors" href="#support-plan-form">
+<span>Configure Custom Deployment</span>
+<span class="material-symbols-outlined text-base">north_east</span>
+</a>
+</div>
+<!-- Pillar Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Pillar 01 -->
+<div class="bg-white border border-border-subtle rounded-lg p-space-xl flex flex-col justify-between hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-data-mono text-data-mono text-blue-primary font-bold bg-blue-soft px-space-xs py-0.5 rounded">PILLAR 01</span>
+<span class="material-symbols-outlined text-blue-primary text-2xl">record_voice_over</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Commercial &amp; Technical Interpreters</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+              Fluent across English, Arabic, French, Russian, and Spanish. Trained specifically in Incoterms (CIF Alexandria, FOB), cold chain logistics, import tariffs, and Egyptian shelf-life regulations.
+            </p>
+</div>
+<ul class="space-y-space-xs pt-space-sm border-t border-border-subtle font-data-mono text-data-mono text-text-secondary text-xs">
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Arabic commercial dialect proficiency</li>
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Catalog and price-sheet briefing pre-show</li>
+</ul>
+</div>
+<!-- Pillar 02 -->
+<div class="bg-white border border-border-subtle rounded-lg p-space-xl flex flex-col justify-between hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-data-mono text-data-mono text-blue-primary font-bold bg-blue-soft px-space-xs py-0.5 rounded">PILLAR 02</span>
+<span class="material-symbols-outlined text-blue-primary text-2xl">handshake</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Pre-Show Importer Matchmaking</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+              We do not wait for buyers to wander into your stand. Starting 60 days before the exhibition, our Cairo team pitches your catalog directly to certified Egyptian importers and books private 1-on-1 booth meetings.
+            </p>
+</div>
+<ul class="space-y-space-xs pt-space-sm border-t border-border-subtle font-data-mono text-data-mono text-text-secondary text-xs">
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Pre-confirmed buyer dossiers with volume capacity</li>
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Guaranteed scheduled time slots in your booth calendar</li>
+</ul>
+</div>
+<!-- Pillar 03 -->
+<div class="bg-white border border-border-subtle rounded-lg p-space-xl flex flex-col justify-between hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-data-mono text-data-mono text-blue-primary font-bold bg-blue-soft px-space-xs py-0.5 rounded">PILLAR 03</span>
+<span class="material-symbols-outlined text-blue-primary text-2xl">badge</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Booth Staff &amp; Brand Hosts</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+              Polished, professional hospitality hosts and product specialists who represent your brand prestige. They manage sample stations, log inquiries, coordinate catering, and maintain booth presentation.
+            </p>
+</div>
+<ul class="space-y-space-xs pt-space-sm border-t border-border-subtle font-data-mono text-data-mono text-text-secondary text-xs">
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Uniform corporate dress code protocols</li>
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Comprehensive product tasting &amp; sample tracking</li>
+</ul>
+</div>
+<!-- Pillar 04 -->
+<div class="bg-white border border-border-subtle rounded-lg p-space-xl flex flex-col justify-between hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-data-mono text-data-mono text-blue-primary font-bold bg-blue-soft px-space-xs py-0.5 rounded">PILLAR 04</span>
+<span class="material-symbols-outlined text-blue-primary text-2xl">filter_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Live Lead Qualification &amp; CRM Capture</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+              Instant digital capture of visitor credentials. Every lead is categorized into Tier 1 (Active Buyer / Import License Confirmed), Tier 2 (Regional Distributor), or Tier 3 (General Inquirer) before the day ends.
+            </p>
+</div>
+<ul class="space-y-space-xs pt-space-sm border-t border-border-subtle font-data-mono text-data-mono text-text-secondary text-xs">
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Daily digital debrief sheets &amp; spreadsheet sync</li>
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Immediate business card digitization &amp; WhatsApp verification</li>
+</ul>
+</div>
+<!-- Pillar 05 -->
+<div class="bg-white border border-border-subtle rounded-lg p-space-xl flex flex-col justify-between hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-data-mono text-data-mono text-blue-primary font-bold bg-blue-soft px-space-xs py-0.5 rounded">PILLAR 05</span>
+<span class="material-symbols-outlined text-blue-primary text-2xl">apartment</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Post-Exhibition Cairo HQ Follow-up</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+              Our Egyptian commercial representatives visit buyer headquarters in New Cairo, 6th of October City, and Alexandria. We deliver formal commercial proposals in person and bridge contract negotiation.
+            </p>
+</div>
+<ul class="space-y-space-xs pt-space-sm border-t border-border-subtle font-data-mono text-data-mono text-text-secondary text-xs">
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Face-to-face executive representation</li>
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Sample delivery to technical procurement committees</li>
+</ul>
+</div>
+<!-- Pillar 06 -->
+<div class="bg-white border border-border-subtle rounded-lg p-space-xl flex flex-col justify-between hover:shadow-md hover:border-blue-primary/40 transition-all">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-data-mono text-data-mono text-blue-primary font-bold bg-blue-soft px-space-xs py-0.5 rounded">PILLAR 06</span>
+<span class="material-symbols-outlined text-blue-primary text-2xl">co_present</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Turnkey Remote Booth Execution</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+              Cannot justify travel budgets or visa logistics? Send your product samples and marketing collateral to our Cairo warehouse. We manage your physical stand 100% and patch you via live video for VIP negotiations.
+            </p>
+</div>
+<ul class="space-y-space-xs pt-space-sm border-t border-border-subtle font-data-mono text-data-mono text-text-secondary text-xs">
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Zero flights, zero hotel expenses required</li>
+<li class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-blue-primary"></span>Live streaming booth desk connected to your office HQ</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 3-PHASE TIMELINE: BEFORE, DURING, AFTER -->
+<section class="w-full bg-white border-y border-border-subtle py-space-4xl">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto space-y-space-xs mb-space-3xl">
+<span class="font-label-caps text-label-caps uppercase text-blue-primary font-bold tracking-widest">DEPLOYMENT CHRONOLOGY</span>
+<h2 class="font-headline-lg text-headline-lg text-navy-deep">Your Three-Phase Exhibition Battle Plan.</h2>
+<p class="font-body-md text-body-md text-text-secondary">From preliminary importer mapping in October to post-show contract sign-offs in January, we protect every phase of your Egypt entry.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Phase 1 -->
+<div class="p-space-xl bg-page-bg border border-border-subtle rounded-lg relative hover:shadow-md transition-shadow">
+<div class="inline-block px-space-xs py-space-2xs bg-blue-soft border border-blue-primary/20 font-label-caps text-label-caps text-blue-primary font-bold uppercase mb-space-md rounded">PHASE 01 • PRE-SHOW</div>
+<div class="font-headline-md text-headline-sm text-navy-deep mb-space-xs">Strategic Preparation &amp; Outreach</div>
+<div class="font-data-mono text-data-mono text-text-muted mb-space-md">T-60 Days to Show Kickoff</div>
+<ul class="space-y-space-sm font-body-sm text-body-sm text-text-secondary">
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Product catalog translation &amp; local price positioning assessment</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Direct outreach to top 30 Egyptian FMCG importers matching your specs</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Pre-booking of 12–20 verified private booth appointments</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Assigned interpreter briefings and product terminology mastery</li>
+</ul>
+</div>
+<!-- Phase 2 -->
+<div class="p-space-xl bg-blue-soft/60 border-2 border-blue-primary rounded-lg relative shadow-sm">
+<div class="inline-block px-space-xs py-space-2xs bg-blue-primary font-label-caps text-label-caps text-white font-bold uppercase mb-space-md rounded">PHASE 02 • ON-GROUND (7–10 DEC)</div>
+<div class="font-headline-md text-headline-sm text-navy-deep mb-space-xs">Flawless EIEC Booth Execution</div>
+<div class="font-data-mono text-data-mono text-blue-primary font-semibold mb-space-md">4 Days On-Site in Cairo</div>
+<ul class="space-y-space-sm font-body-sm text-body-sm text-text-secondary">
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Early 8:30 AM booth arrival and preparation check</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Arabic commercial representation during all unscheduled walk-ins</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Handling of pre-scheduled importer matchmaking meetings</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Daily lead dossier compilation &amp; debriefing session</li>
+</ul>
+</div>
+<!-- Phase 3 -->
+<div class="p-space-xl bg-page-bg border border-border-subtle rounded-lg relative hover:shadow-md transition-shadow">
+<div class="inline-block px-space-xs py-space-2xs bg-yellow-brand/20 border border-yellow-brand/50 font-label-caps text-label-caps text-navy-deep font-bold uppercase mb-space-md rounded">PHASE 03 • POST-SHOW</div>
+<div class="font-headline-md text-headline-sm text-navy-deep mb-space-xs">Cairo Follow-Up &amp; Deal Closing</div>
+<div class="font-data-mono text-data-mono text-text-muted mb-space-md">Days 1 to 60 Post-Exhibition</div>
+<ul class="space-y-space-sm font-body-sm text-body-sm text-text-secondary">
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Immediate WhatsApp &amp; formal email follow-up in Arabic</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Personal Cairo office visits to high-potential buyer procurement heads</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Assistance navigating Egyptian NFSA food inspection paperwork</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Contract execution and initial container order confirmation</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CASE STUDY TEASER (PROOF SECTION) -->
+<section class="w-full bg-page-bg py-space-4xl">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="bg-white border border-border-subtle rounded-xl p-space-xl lg:p-space-3xl shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-7 space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-blue-soft border border-blue-primary/20 font-data-mono text-data-mono text-blue-primary font-bold text-xs rounded">CASE STUDY: AGRI EXPORT SUCCESS</span>
+<span class="text-text-muted">•</span>
+<span class="font-data-mono text-data-mono text-text-muted text-xs font-semibold">PREVIOUS FOOD AFRICA CYCLE</span>
+</div>
+<h3 class="font-headline-lg text-headline-md lg:text-headline-lg text-navy-deep">
+              How an Indian Spices &amp; Rice Exporter Locked 2 Wholesale Contracts in 45 Days.
+            </h3>
+<p class="font-body-md text-body-md text-text-secondary">
+              A major Mumbai-based agricultural processor arrived at Food Africa with no Arabic-speaking personnel and zero prior distribution channels in Egypt. Competing stands dominated through local connections.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm py-space-xs">
+<div class="p-space-sm bg-page-bg border border-border-subtle rounded">
+<div class="font-headline-sm text-headline-sm text-blue-primary font-bold">18</div>
+<div class="font-body-sm text-body-sm text-text-muted">Pre-screened Importer Meetings</div>
+</div>
+<div class="p-space-sm bg-page-bg border border-border-subtle rounded">
+<div class="font-headline-sm text-headline-sm text-navy-deep font-bold">$420,000</div>
+<div class="font-body-sm text-body-sm text-text-muted">Initial Contract Pipeline</div>
+</div>
+<div class="p-space-sm bg-page-bg border border-border-subtle rounded">
+<div class="font-headline-sm text-headline-sm text-blue-primary font-bold">45 Days</div>
+<div class="font-body-sm text-body-sm text-text-muted">To Signed Letter of Credit</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-navy-deep/90 italic bg-blue-soft/50 p-space-sm rounded border-l-4 border-blue-primary">
+              "Globalize acted as our legitimate Egyptian executive branch. Our interpreter did not simply translate words; he actively guarded our margin in Egyptian commercial vernacular. Their post-show visit to Alexandria buyers closed deals we would have definitely lost from Mumbai."
+            </p>
+<div class="font-label-caps text-label-caps text-text-muted uppercase tracking-wider font-bold">— S. K. MEHTA, VP INTERNATIONAL EXPORTS</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="h-80 w-full overflow-hidden bg-blue-soft rounded border border-border-subtle">
+<img class="w-full h-full object-cover" data-alt="International export director reviewing agricultural trade container specifications with Egyptian buyer in an executive meeting room in New Cairo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7RUYrACuX5lwFVxNMDfaVAUozkB7zmZYrQXYynuouhkOpvq6UK_krzOp6s_prclmuFYpmD0IgOimR_JcqlqU_WLVJGjvKAbkywtjX5trHajZcys0capYJUuRPwQ-j0wqM5nEo191i2CuOnj-4kdbdYH8jh0bmHVQ9-3B6OmOShMiLWvzm6RaayP9_rjZW80m8HSWhg37KD-R-M67IEDvVgCVmvAFI3EySL8wd47VijUmJgS2R6Sz1"/>
+</div>
+<div class="p-space-md bg-page-bg border border-border-subtle rounded mt-space-sm">
+<div class="font-label-caps text-label-caps text-blue-primary font-bold uppercase">OUTCOME VERIFICATION</div>
+<div class="font-body-sm text-body-sm text-navy-deep font-semibold mt-1">Exclusive regional distribution secured for Great Cairo and Nile Delta wholesale sectors.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PACKAGES / CLEAR COMMERCIAL TIERS -->
+<section class="w-full bg-white border-y border-border-subtle py-space-4xl" id="packages">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto space-y-space-xs mb-space-3xl">
+<span class="font-label-caps text-label-caps uppercase text-blue-primary font-bold tracking-widest">TRANSPARENT EXHIBITOR TIERS</span>
+<h2 class="font-headline-lg text-headline-lg text-navy-deep">Choose Your Food Africa Support Tier.</h2>
+<p class="font-body-md text-body-md text-text-secondary">Direct, predictable pricing with zero hidden surcharges. All personnel verified and managed by our permanent Cairo operations office.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch">
+<!-- Package 01 -->
+<div class="p-space-xl bg-page-bg border border-border-subtle rounded-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest font-bold mb-space-2xs">PACKAGE 01</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Essential Exhibition Support</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Perfect for overseas teams who need sharp linguistic fluency and professional booth coverage inside EIEC.</p>
+<div class="py-space-md bg-white border border-border-subtle rounded px-space-md mb-space-lg">
+<span class="font-label-caps text-label-caps text-text-muted font-bold">STARTING AT</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-navy-deep font-bold">$180</span>
+<span class="font-data-mono text-data-mono text-text-muted font-semibold">/ DAY</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted text-xs">Standard 4-Day Exhibition Cycle</span>
+</div>
+<ul class="space-y-space-sm font-body-sm text-body-sm text-text-secondary">
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Dedicated Commercial Interpreter (Arabic + English)</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Product Catalog and Pricing Pre-Briefing</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>On-site Visitor Reception &amp; Qualification</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Sample Handout &amp; Contact Card Collection</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>End-of-Day Contact Log Delivery</li>
+</ul>
+</div>
+<div class="pt-space-xl">
+<a class="w-full h-12 bg-white hover:bg-blue-soft border border-border-subtle text-navy-deep font-label-md text-label-md uppercase tracking-wider font-bold rounded flex items-center justify-center transition-colors" href="#support-plan-form">
+              Select Essential Tier
+            </a>
+</div>
+</div>
+<!-- Package 02 (MOST POPULAR HIGHLIGHT) -->
+<div class="p-space-xl bg-blue-soft/60 border-2 border-blue-primary rounded-lg relative flex flex-col justify-between shadow-lg">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-yellow-brand text-navy-deep font-label-caps text-label-caps uppercase px-space-md py-1 tracking-widest font-extrabold rounded shadow-sm">
+            MOST CHOSEN BY EXPORT DIRECTORS
+          </div>
+<div>
+<div class="font-label-caps text-label-caps text-blue-primary font-bold uppercase tracking-widest mb-space-2xs">PACKAGE 02</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Business Show + Buyer Outreach</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Our premier high-ROI suite: targeted pre-show buyer matchmaking combined with full on-site negotiation and Cairo follow-up.</p>
+<div class="py-space-md bg-white border border-blue-primary/30 rounded px-space-md mb-space-lg">
+<span class="font-label-caps text-label-caps text-blue-primary font-bold">CUSTOMIZED VALUE TIER</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-blue-primary font-bold">Custom Quote</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted text-xs">Tailored to Product Category &amp; Importer Specs</span>
+</div>
+<ul class="space-y-space-sm font-body-sm text-body-sm text-text-secondary">
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span><strong class="text-navy-deep">Everything in Essential Support</strong></li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Pre-Show Outreach to 25+ Verified Importers</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span><strong class="text-navy-deep">Guaranteed 8–15 Scheduled B2B Meetings</strong> at Your Booth</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Senior Trade Negotiator (Incoterms &amp; L/C savvy)</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>2-Week Post-Show In-Person Follow-Up by Cairo Office</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Direct Delivery of Samples to Egyptian Procurement Heads</li>
+</ul>
+</div>
+<div class="pt-space-xl">
+<a class="w-full h-12 bg-yellow-brand hover:bg-[#fab40a] text-navy-deep font-label-md text-label-md uppercase tracking-wider font-extrabold rounded shadow-md flex items-center justify-center transition-all hover:scale-[1.01]" href="#support-plan-form">
+              Request Business Suite Quote
+            </a>
+</div>
+</div>
+<!-- Package 03 -->
+<div class="p-space-xl bg-page-bg border border-border-subtle rounded-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="font-label-caps text-label-caps text-text-muted font-bold uppercase tracking-widest mb-space-2xs">PACKAGE 03</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs">Turnkey Cairo Market Partner</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">Complete outsourced representation. For international brands seeking permanent market establishment or 100% remote booth operation.</p>
+<div class="py-space-md bg-white border border-border-subtle rounded px-space-md mb-space-lg">
+<span class="font-label-caps text-label-caps text-navy-deep font-bold">RETAINER MODEL</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-navy-deep font-bold">Retainer Basis</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted text-xs">Exhibition + 3 to 6 Months Field BD</span>
+</div>
+<ul class="space-y-space-sm font-body-sm text-body-sm text-text-secondary">
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Full Remote Stand Management (No Travel Required)</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Egyptian Business Development Manager Assigned to Brand</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Support with NFSA (Egyptian Food Safety Authority)</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Commercial Contract Review &amp; Importer Due Diligence</li>
+<li class="flex items-start gap-space-xs"><span class="text-blue-primary font-bold">✓</span>Cairo Office &amp; Meeting Facility Access</li>
+</ul>
+</div>
+<div class="pt-space-xl">
+<a class="w-full h-12 bg-white hover:bg-blue-soft border border-border-subtle text-navy-deep font-label-md text-label-md uppercase tracking-wider font-bold rounded flex items-center justify-center transition-colors" href="#support-plan-form">
+              Inquire for Market Partnership
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DIRECT HIGH-CONVERTING INTAKE FORM (CORE CONVERSION ENGINE) -->
+<section class="w-full bg-page-bg py-space-4xl" id="support-plan-form">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="max-w-4xl mx-auto bg-white border border-border-subtle rounded-xl p-space-xl lg:p-space-3xl shadow-lg relative">
+<!-- Form Header -->
+<div class="border-b border-border-subtle pb-space-lg mb-space-xl">
+<div class="flex items-center gap-space-xs text-blue-primary font-label-caps text-label-caps uppercase tracking-widest font-bold mb-space-2xs">
+<span class="material-symbols-outlined text-sm">assignment_turned_in</span>
+<span>EXHIBITOR FAST APPLICATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-navy-deep">
+            Get Your Customized Food Africa 2026 Support Plan.
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary mt-space-xs">
+            Submit your booth profile and objectives. Our Cairo Commercial Director will review your food sector, verify potential importer matches, and provide an actionable breakdown within 24 hours.
+          </p>
+</div>
+<!-- Intake Form -->
+<form class="space-y-space-lg" onsubmit="event.preventDefault(); alert('Thank you. Your Food Africa 2026 support request has been dispatched to our Cairo team. We will review and respond within 24 business hours.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Company Name -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Company Name *</label>
+<input class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors" placeholder="e.g. Al-Noor Agricultural Exports" required="" type="text"/>
+</div>
+<!-- Country of Origin -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Country of Origin / Headquarters *</label>
+<input class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors" placeholder="e.g. Spain, India, UAE, Italy, Turkey" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Contact Name & Title -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Contact Person &amp; Title *</label>
+<input class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors" placeholder="e.g. Carlos Mendez, Export Director" required="" type="text"/>
+</div>
+<!-- Work Email -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Official Work Email *</label>
+<input class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors" placeholder="carlos@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- WhatsApp Number -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">WhatsApp Number (with country code) *</label>
+<input class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors" placeholder="+34 600 123 456" required="" type="tel"/>
+</div>
+<!-- Booth Status -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Food Africa 2026 Booth Status *</label>
+<select class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors" required="">
+<option disabled="" selected="" value="">Select Current Status</option>
+<option value="confirmed">Stand Space Confirmed (Have Hall &amp; Stand #)</option>
+<option value="pending">Booking in Progress with IFP / EIEC</option>
+<option value="evaluating">Evaluating Participation (Need Budgeting)</option>
+<option value="remote">Seeking 100% Remote Representation (No Travel)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Product Category -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Primary Product Category *</label>
+<select class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors" required="">
+<option disabled="" selected="" value="">Select Industry Sector</option>
+<option value="fmcg">FMCG &amp; Packaged Foods</option>
+<option value="dairy">Dairy &amp; Milk Derivatives</option>
+<option value="grains">Bulk Grains, Pulses &amp; Oilseeds</option>
+<option value="confectionery">Confectionery, Chocolate &amp; Bakery</option>
+<option value="frozen">Frozen Fruits, Vegetables &amp; Meats</option>
+<option value="ingredients">Food Ingredients, Additives &amp; Flavors</option>
+<option value="beverages">Beverages, Juices &amp; Concentrates</option>
+<option value="packaging">Processing &amp; Food Packaging Tech</option>
+</select>
+</div>
+<!-- Preparation Timeline -->
+<div class="space-y-space-2xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Target Preparation Start Date</label>
+<select class="w-full h-12 bg-page-bg border border-border-subtle rounded px-space-sm text-navy-deep font-body-md text-body-md focus:outline-none focus:border-blue-primary focus:bg-white transition-colors">
+<option value="immediate">Immediately (Lock Early Buyer Outreach)</option>
+<option value="60days">60 Days Prior to Show</option>
+<option value="30days">30 Days Prior to Show</option>
+<option value="info">Just Gathering Proposals for Board Review</option>
+</select>
+</div>
+</div>
+<!-- Services Checkboxes -->
+<div class="space-y-space-xs pt-space-xs">
+<label class="block font-label-caps text-label-caps text-navy-deep font-bold uppercase">Requested Capabilities (Select All That Apply):</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-space-xs p-space-sm bg-page-bg border border-border-subtle rounded cursor-pointer hover:bg-blue-soft/50 transition-colors">
+<input checked="" class="accent-blue-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">Commercial Interpreter</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-page-bg border border-border-subtle rounded cursor-pointer hover:bg-blue-soft/50 transition-colors">
+<input checked="" class="accent-blue-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">Pre-Show Importer Meetings</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-page-bg border border-border-subtle rounded cursor-pointer hover:bg-blue-soft/50 transition-colors">
+<input class="accent-blue-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">Booth Hospitality Staff</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-page-bg border border-border-subtle rounded cursor-pointer hover:bg-blue-soft/50 transition-colors">
+<input checked="" class="accent-blue-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">Post-Show Cairo HQ Follow-up</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-page-bg border border-border-subtle rounded cursor-pointer hover:bg-blue-soft/50 transition-colors">
+<input class="accent-blue-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">Remote Stand Execution</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-page-bg border border-border-subtle rounded cursor-pointer hover:bg-blue-soft/50 transition-colors">
+<input class="accent-blue-primary w-4 h-4 rounded" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium">Egyptian NFSA / Regulatory</span>
+</label>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-space-md">
+<button class="w-full h-14 bg-yellow-brand hover:bg-[#fab40a] text-navy-deep font-label-md text-label-md uppercase tracking-wider font-extrabold flex items-center justify-center gap-space-xs rounded shadow-md transition-all hover:scale-[1.005]" type="submit">
+<span>GET MY FREE SUPPORT PLAN →</span>
+</button>
+<div class="flex items-center justify-center gap-space-xs text-text-muted font-data-mono text-data-mono text-xs pt-space-xs">
+<span class="material-symbols-outlined text-xs">lock</span>
+<span>100% Confidentiality Guaranteed. Never shared with competitors or non-authorized entities.</span>
+</div>
+</div>
+</form>
+<!-- Direct WhatsApp Quick-Card -->
+<div class="mt-space-2xl p-space-lg bg-blue-soft border border-blue-primary/20 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="h-12 w-12 bg-white border border-border-subtle rounded flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-blue-primary text-2xl">chat</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-navy-deep font-bold">URGENT OR PREFER DIRECT CHAT?</div>
+<div class="font-body-sm text-body-sm text-text-secondary">Connect directly with our Cairo Commercial Director on WhatsApp for immediate availability.</div>
+</div>
+</div>
+<a class="h-11 px-space-lg bg-blue-primary hover:bg-navy-deep text-white font-label-md text-label-md uppercase tracking-wider font-bold inline-flex items-center justify-center gap-space-xs whitespace-nowrap rounded transition-colors shadow-sm" href="https://wa.me/201062990808" rel="noopener noreferrer" target="_blank">
+<span>Open WhatsApp (+20 106 299 0808)</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- HIGH-INTENT FAQ FOR CAMPAIGN VISITORS -->
+<section class="w-full bg-white border-y border-border-subtle py-space-4xl">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="max-w-3xl space-y-space-xs mb-space-3xl">
+<span class="font-label-caps text-label-caps uppercase text-blue-primary font-bold tracking-widest">TRANSPARENT ANSWERS</span>
+<h2 class="font-headline-lg text-headline-lg text-navy-deep">Frequently Asked Questions by Exhibitors.</h2>
+<p class="font-body-md text-body-md text-text-secondary">Everything you need to know about our Cairo on-ground operational protocols before confirming your reservation.</p>
+</div>
+<div class="max-w-4xl space-y-space-md">
+<!-- FAQ 1 -->
+<div class="p-space-lg bg-page-bg border border-border-subtle rounded-lg">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs flex items-center justify-between">
+<span>Can you guarantee verified meetings with legitimate Egyptian importers?</span>
+<span class="material-symbols-outlined text-blue-primary">check_circle</span>
+</h4>
+<p class="font-body-md text-body-md text-text-secondary">
+            Yes. When selecting our Package 02 (Business Show + Buyer Outreach), we provide a pre-show dossier containing verified company names, commercial registration details, and specific procurement volume interests. We do not count consumer walk-ins as meetings; only scheduled B2B sit-downs with qualified decision-makers.
+          </p>
+</div>
+<!-- FAQ 2 -->
+<div class="p-space-lg bg-page-bg border border-border-subtle rounded-lg">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs flex items-center justify-between">
+<span>What if our international team cannot travel to Cairo for Food Africa?</span>
+<span class="material-symbols-outlined text-blue-primary">check_circle</span>
+</h4>
+<p class="font-body-md text-body-md text-text-secondary">
+            We provide full Remote Stand Execution. You can ship your promotional displays and product samples directly to our Cairo office. Our trained staff will set up your booth, welcome attendees, qualify commercial inquiries, and initiate live video conferences between pre-vetted buyers and your executives at your home headquarters.
+          </p>
+</div>
+<!-- FAQ 3 -->
+<div class="p-space-lg bg-page-bg border border-border-subtle rounded-lg">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs flex items-center justify-between">
+<span>How early should we book our Food Africa exhibition support team?</span>
+<span class="material-symbols-outlined text-blue-primary">check_circle</span>
+</h4>
+<p class="font-body-md text-body-md text-text-secondary">
+            To ensure thorough pre-show buyer outreach, we strongly recommend initiating your support plan 6 to 8 weeks prior to the exhibition dates (by October 2026). Specialized interpreters versed in technical agricultural and FMCG terms are typically reserved completely by early November.
+          </p>
+</div>
+<!-- FAQ 4 -->
+<div class="p-space-lg bg-page-bg border border-border-subtle rounded-lg">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs flex items-center justify-between">
+<span>Can we hire a commercial interpreter for just 1 or 2 specific days?</span>
+<span class="material-symbols-outlined text-blue-primary">check_circle</span>
+</h4>
+<p class="font-body-md text-body-md text-text-secondary">
+            While the majority of clients retain our interpreters for the full 4-day run of the show to maintain consistency with recurring buyer visits, partial bookings (minimum 2 consecutive days) are accommodated based on schedule availability.
+          </p>
+</div>
+<!-- FAQ 5 -->
+<div class="p-space-lg bg-page-bg border border-border-subtle rounded-lg">
+<h4 class="font-headline-sm text-headline-sm text-navy-deep mb-space-xs flex items-center justify-between">
+<span>Do you assist with Egyptian food regulatory (NFSA) inquiries?</span>
+<span class="material-symbols-outlined text-blue-primary">check_circle</span>
+</h4>
+<p class="font-body-md text-body-md text-text-secondary">
+            Yes. Our permanent Cairo business development practice works routinely alongside registered Egyptian customs and clearing brokers. We provide clear guidance on National Food Safety Authority (NFSA) registration protocols, required Arabic labeling, and lab testing parameters for imported foodstuffs.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL URGENCY BANNER / CLOSING CTA -->
+<section class="w-full bg-navy-deep py-space-3xl relative overflow-hidden text-white">
+<div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop text-center space-y-space-md relative z-10">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs bg-white/10 rounded font-label-caps text-label-caps uppercase text-yellow-brand font-bold border border-white/10">
+<span>LIMITED DELEGATION ALLOCATION FOR DECEMBER 2026</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-white max-w-3xl mx-auto">
+        Secure Your Cairo Ground Team Before Your Competitors Book the Best Importers.
+      </h2>
+<p class="font-body-md text-body-md text-blue-soft max-w-xl mx-auto">
+        Avoid standing alone in your booth waiting for walk-ins. Let our Cairo team fill your schedule with verified buyers and close post-show contracts.
+      </p>
+<div class="pt-space-sm flex flex-col sm:flex-row items-center justify-center gap-space-md">
+<a class="h-14 px-space-2xl bg-yellow-brand hover:bg-[#fab40a] text-navy-deep font-label-md text-label-md uppercase tracking-wider font-extrabold inline-flex items-center justify-center gap-space-xs rounded shadow-lg transition-all hover:scale-[1.01]" href="#support-plan-form">
+<span>Claim Your Support Plan Now</span>
+<span class="material-symbols-outlined text-base font-bold">arrow_forward</span>
+</a>
+<a class="h-14 px-space-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-label-md text-label-md uppercase tracking-wider font-bold inline-flex items-center justify-center gap-space-xs rounded transition-colors" href="https://wa.me/201062990808" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-yellow-brand text-lg">chat</span>
+<span>WhatsApp Cairo Desk Directly</span>
+</a>
+</div>
+</div>
+</section>
+<!-- STICKY CONVERSION BAR FOR MOBILE & DESKTOP QUICK ACCESS -->
+<aside class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-border-subtle px-margin-mobile py-space-xs shadow-xl">
+<div class="max-w-max-container mx-auto flex items-center justify-between gap-space-sm">
+<div class="hidden sm:flex items-center gap-space-sm">
+<span class="h-2.5 w-2.5 rounded-full bg-blue-primary animate-pulse"></span>
+<div class="font-body-sm text-body-sm text-navy-deep font-bold">
+          Food Africa 2026 Delegation Desk
+        </div>
+<span class="text-text-muted">•</span>
+<div class="font-data-mono text-data-mono text-blue-primary font-semibold text-xs">
+          Buyer Pre-Outreach Window Active
+        </div>
+</div>
+<div class="flex items-center justify-end w-full sm:w-auto gap-space-xs sm:gap-space-sm">
+<a class="h-10 px-space-sm sm:px-space-md bg-page-bg hover:bg-blue-soft border border-border-subtle text-navy-deep font-label-md text-label-md uppercase font-bold flex items-center gap-space-2xs rounded transition-colors shrink-0" href="https://wa.me/201062990808" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-blue-primary text-base">chat</span>
+<span class="hidden md:inline">WhatsApp</span>
+</a>
+<a class="h-10 px-space-md sm:px-space-lg bg-yellow-brand hover:bg-[#fab40a] text-navy-deep font-label-md text-label-md uppercase font-extrabold flex items-center gap-space-2xs rounded transition-all shadow-sm shrink-0 whitespace-nowrap" href="#support-plan-form">
+<span>Get Support Plan</span>
+<span class="material-symbols-outlined text-base font-bold">arrow_forward</span>
+</a>
+</div>
+</div>
+</aside>
+</div></main><footer class="w-full bg-navy-deep text-white border-t border-navy-deep mt-space-4xl"><div class="max-w-max-container mx-auto px-margin-mobile lg:px-margin-desktop py-space-4xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-2xl pb-space-3xl border-b border-white/10"><div class="lg:col-span-4 space-y-space-md"><div class="flex items-center gap-space-sm"><div class="p-1.5 bg-white rounded"><img alt="Globalize Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSiY4Bf1Ms9blJ-4dy0JG-NM7q5QSBb_kDY7oPw2nis7HXFB36p3NbuHToL_Y61JrOOp7pi7K8Pri1ZRAf05MGVUGg2Gdy7jinaxbEe51TpS0zKweat6q9eBJ57HLJPdrQkqvC3KktKNLJqh3Pmdoo4Q0niLWpTLZHvzUJa_5aN8de6qfz0fiI-Q13HZPf8sgt2fhlkPrl85XGaMODeTMcBP9AkKkv8CYrUUmuCOcNQ_VYFEvq6_TX8MvQIy2PRI36DA"/></div><span class="font-headline-sm text-headline-sm text-white uppercase tracking-wider font-bold">Globalize</span></div><p class="font-body-lg text-body-lg text-blue-soft max-w-sm">Your Team in Egypt. Even When You're Not.</p><div class="space-y-space-xs pt-space-sm"><div class="flex items-center gap-space-xs text-blue-soft font-body-sm text-body-sm"><span class="material-symbols-outlined text-yellow-brand text-sm">mail</span><a class="hover:text-white transition-colors" href="mailto:info@globalizetl.com">info@globalizetl.com</a></div><div class="flex items-center gap-space-xs text-blue-soft font-body-sm text-body-sm"><span class="material-symbols-outlined text-yellow-brand text-sm">call</span><a class="hover:text-white transition-colors" href="tel:+201062990808">+20 106 299 0808 (Phone / WhatsApp)</a></div><div class="flex items-start gap-space-xs text-blue-soft font-body-sm text-body-sm"><span class="material-symbols-outlined text-yellow-brand text-sm shrink-0 mt-0.5">location_on</span><span>Cairo Office: New Cairo / Nasr City Business District</span></div></div></div><div class="lg:col-span-4 space-y-space-sm"><div class="font-label-caps text-label-caps uppercase tracking-widest text-yellow-brand font-bold">Services &amp; Deployment</div><ul class="space-y-space-xs font-body-sm text-body-sm text-blue-soft/90"><li><a class="hover:text-yellow-brand transition-colors block" data-path="services" href="#">Exhibition Interpreters</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="services" href="#">Exhibition Staffing</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="services" href="#">Buyer Outreach</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="services" href="#">Business Development</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="services" href="#">Post-Exhibition Follow-Up</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="services" href="#">Local Business Support in Egypt</a></li></ul></div><div class="lg:col-span-4 space-y-space-sm"><div class="font-label-caps text-label-caps uppercase tracking-widest text-yellow-brand font-bold">Food Africa Pavilion Hub</div><ul class="space-y-space-xs font-body-sm text-body-sm text-blue-soft/90"><li><a class="hover:text-yellow-brand transition-colors block" data-path="food-africa-2026" href="#">Food Africa 2026 Exhibitor Hub</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="how-it-works" href="#">EIEC Cairo Logistics</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="consultation" href="#">Schedule a Consultation</a></li><li><a class="hover:text-yellow-brand transition-colors block" data-path="consultation" href="#">Download Guide</a></li></ul><div class="p-space-md border border-white/10 bg-white/5 rounded-lg mt-space-md"><div class="font-label-caps text-label-caps text-yellow-brand font-bold mb-1">DIPLOMATIC &amp; BILATERAL PROTOCOL</div><p class="font-body-sm text-body-sm text-blue-soft/80">Authorized delegation support and commercial liaison architecture for international agricultural exhibitors.</p></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-blue-soft/70"><div>© 2026 Globalize Group. All rights reserved. Supporting international business delegations in Egypt.</div><div class="flex items-center gap-space-lg font-label-caps text-label-caps"><a class="hover:text-white transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span class="text-white/20">|</span><a class="hover:text-white transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></div></div></div></footer></body></html>

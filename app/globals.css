@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-blue: #0838A1;
+  --color-deep-navy: #092B72;
+  --color-primary-yellow: #FFC120;
+  --color-light-bg: #F8FAEC;
+  --color-soft-blue: #EEF3FF;
+  --color-border-subtle: #E2E8F0;
+  --color-primary-text: #092B72;
+  --color-secondary-text: #475569;
+  --color-muted-text: #64748B;
+
+  --font-display: var(--font-epilogue), var(--font-manrope), system-ui, sans-serif;
+  --font-sans: var(--font-manrope), var(--font-inter), system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary-blue: #0838A1;
+  --color-deep-navy: #092B72;
+  --color-primary-yellow: #FFC120;
+  --color-light-bg: #F8FAEC;
+  --color-soft-blue: #EEF3FF;
+  --color-border-subtle: #E2E8F0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: #092B72;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities */
+.bg-light-bg {
+  background-color: #F8FAEC;
+}
+
+.bg-soft-blue {
+  background-color: #EEF3FF;
+}
+
+.bg-deep-navy {
+  background-color: #092B72;
+}
+
+.bg-primary-blue {
+  background-color: #0838A1;
+}
+
+.bg-primary-yellow {
+  background-color: #FFC120;
+}
+
+.text-deep-navy {
+  color: #092B72;
+}
+
+.text-primary-blue {
+  color: #0838A1;
+}
+
+.text-primary-yellow {
+  color: #FFC120;
+}
+
+.text-secondary-text {
+  color: #475569;
+}
+
+.text-muted-text {
+  color: #64748B;
+}
+
+.border-subtle {
+  border-color: #E2E8F0;
+}
+
+/* Container max width constraint */
+.container-custom {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
