@@ -75,6 +75,14 @@ export async function POST(request: Request) {
     // 1. Persistent local storage
     persistLead(submissionRecord);
 
+    // 2. Insert into Neon PostgreSQL if DATABASE_URL is set
+    try {
+      const { insertLeadToNeon } = await import("@/lib/db");
+      await insertLeadToNeon(submissionRecord);
+    } catch (neonErr) {
+      console.error("[Neon Integration Error]", neonErr);
+    }
+
     console.log("[Lead Received - Food Africa 2026]", JSON.stringify(submissionRecord, null, 2));
 
     // 2. Webhook forwarder (if configured e.g. Zapier, Make, Telegram, Slack, or CRM)
