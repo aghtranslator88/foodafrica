@@ -64,3 +64,36 @@ export async function insertLeadToNeon(lead: {
     return false;
   }
 }
+
+export async function getLeadsFromNeon() {
+  const sql = getDb();
+  if (!sql) return null;
+
+  try {
+    const rows = await sql.query(`
+      SELECT 
+        id, 
+        submitted_at as "submittedAt", 
+        company_name as "companyName", 
+        website, 
+        country, 
+        contact_person as "contactPerson", 
+        job_title as "jobTitle", 
+        email, 
+        whatsapp, 
+        industry, 
+        is_exhibiting as "isExhibiting", 
+        has_distributor as "hasDistributor", 
+        support_needs as "supportNeeds", 
+        timeline, 
+        additional_notes as "additionalNotes", 
+        source_url as "sourceUrl"
+      FROM leads 
+      ORDER BY submitted_at DESC
+    `);
+    return rows;
+  } catch (err) {
+    console.error("[Neon DB Fetch Error]:", err);
+    return null;
+  }
+}
